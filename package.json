@@ -3,12 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "dev-pc": "electron .",
+    "build-pc": "react-scripts build && electron-builder .",
+    "eject": "react-scripts eject"
+  },
+  "build": {
+    "appId": "demos",
+    "asar": false,
+    "directories": {
+      "output": "dist",
+      "input": "build"
+    },
+    "win": {
+      "icon": "favicon.ico"
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "crypto-js": "^3.1.9-1",
-    "electron": "^2.0.2",
-    "electron-builder": "^20.15.1",
     "express": "^4.16.3",
     "final-form": "^4.8.0",
     "lodash": "^4.17.10",
@@ -18,12 +35,8 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "dev-pc": "electron .",
-    "build-pc": "react-scripts build && electron-builder .",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1"
   }
 }

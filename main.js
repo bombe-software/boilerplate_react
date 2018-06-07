@@ -7,20 +7,22 @@ let mainWindow;
 
 function createWindow() {
   //Crear y configurar ventana
+  
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      devTools: false
+      devTools: true
     },
-    icon: './favicon.ico',
+    icon: './build/favicon.ico',
     show: false
   })
 
+  
   mainWindow.maximize();
-  mainWindow.setMenu(null);
+  //mainWindow.setMenu(null);
 
-  mainWindow.loadUrl('file://' + __dirname + '/public/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/build/index.html');
   
   mainWindow.show();
   //Configurar cierre de ventana
