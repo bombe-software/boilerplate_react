@@ -16,6 +16,7 @@ class Formulario extends Component {
     }
 
     async some() {
+        /*
         axios.get('https://randomuser.me/api/', {
             params: {
                 results: 10,
@@ -27,7 +28,7 @@ class Formulario extends Component {
             alert('Ve la consola');
             console.log(error);
         });
-
+        */
     }
 
     async onSubmit(values) {
